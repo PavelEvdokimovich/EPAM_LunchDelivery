@@ -15,12 +15,20 @@ namespace WEB.MVC5.Controllers
 	[Authorize(Roles = "admin")]
 	public class SoupsController : Controller
     {
+		#region Private Fields
+
 		private IGenericRepository<Soup> repository = null;
+
+		#endregion
+
+		#region Constructors
 
 		public SoupsController(IGenericRepository<Soup> repositorySoup)
 		{
 			this.repository = repositorySoup;
 		}
+
+		#endregion
 
 		// GET: Soups
 		public ActionResult Index()
