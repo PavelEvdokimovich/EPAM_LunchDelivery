@@ -15,12 +15,20 @@ namespace WEB.MVC5.Controllers
 	[Authorize(Roles = "admin")]
 	public class SaladsController : Controller
     {
+		#region Private Fields
+
 		private IGenericRepository<Salad> repository = null;
+
+		#endregion
+
+		#region Constructors
 
 		public SaladsController(IGenericRepository<Salad> repositorySalad)
 		{
 			this.repository = repositorySalad;
 		}
+
+		#endregion
 
 		// GET: Salads
 		public ActionResult Index()
