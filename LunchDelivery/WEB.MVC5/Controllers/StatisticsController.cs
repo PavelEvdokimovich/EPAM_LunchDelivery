@@ -11,7 +11,11 @@ namespace WEB.MVC5.Controllers
 	[Authorize(Roles = "admin")]
 	public class StatisticsController : Controller
     {
+		#region Private Fields
+
 		private LunchContext db = new LunchContext();
+
+		#endregion
 
 		// GET: Statistics
 		public ActionResult Index()
